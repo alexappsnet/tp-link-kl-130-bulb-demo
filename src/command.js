@@ -23,7 +23,7 @@ export function createSwitchOnOffCommand(onOff /* 0-off, 1-on */) {
     ['smartlife.iot.smartbulb.lightingservice']: {
       transition_light_state: {
         on_off: onOff,
-        transition_period: 500
+        transition_period: 200
       }
     }
   };
@@ -36,7 +36,10 @@ export function createSetBrightnessCommand(level /*0-100*/) {
         ignore_default: 1,
         on_off: 1,
         brightness: level,
-        transition_period: 500
+        color_temp: 0,
+        hue: 60,
+        saturation: 1,
+        transition_period: 0
       }
     }
   };
@@ -52,8 +55,8 @@ export function createSetRgbCommand(red /*0-255*/, green /*0-255*/, blue /*0-255
         brightness: Math.round(100 * level),
         color_temp: 0,
         hue,
-        saturation,
-        transition_period: 500
+        saturation: Math.round(100 * saturation),
+        transition_period: 0
       }
     }
   };
