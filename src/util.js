@@ -2,10 +2,9 @@ export function objToJson(obj) {
   return JSON.stringify(obj);
 }
 
-export function rgb2hsl(r, g, b) {
+export function rgb2hsv(r, g, b) {
   let v = Math.max(r, g, b);
   let c = v - Math.min(r, g, b);
-  let f = 1 - Math.abs(v + v - c - 1);
   let h = c && (
     (v === r)
       ? (
@@ -19,5 +18,5 @@ export function rgb2hsl(r, g, b) {
           )
       )
   );
-  return [60 * (h < 0 ? h + 6 : h), f ? c / f : 0, (v + v - c) / 2];
+  return [ 60 * (h < 0 ? h + 6 : h), v && c / v, v];
 }

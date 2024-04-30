@@ -1,4 +1,4 @@
-import {rgb2hsl} from './util.js';
+import {rgb2hsv} from './util.js';
 
 export function createGetSysInfoCommand() {
   return {
@@ -43,7 +43,7 @@ export function createSetBrightnessCommand(level /*0-100*/) {
 }
 
 export function createSetRgbCommand(red /*0-255*/, green /*0-255*/, blue /*0-255*/) {
-  const [hue, saturation, level] = rgb2hsl(red/255.0, green/255.0, blue/255.0);
+  const [hue, saturation, level] = rgb2hsv(red/255.0, green/255.0, blue/255.0);
   return {
     ['smartlife.iot.smartbulb.lightingservice']: {
       transition_light_state: {
