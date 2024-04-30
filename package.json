@@ -1,0 +1,16 @@
+{
+  "name": "smartbulb",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["kasa", "javascript", "node", "tplink", "smart light", "smartbulb","bulb", "KL130", "control"],
+  "author": "Alex Malko",
+  "license": "MIT",
+  "dependencies": {
+    "delay": "^6.0.0"
+  }
+}
