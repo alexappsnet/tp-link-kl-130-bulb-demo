@@ -30,3 +30,31 @@ We were happy to get smart bulbs where we can change colors and brightness in ea
     - Ok...trying to recover the password.
     - Oh, come on! Standing up from bed and turning the lamp switch off.
     - **WISH**: There is NO REASON to auto log out on personal mobile device.
+
+# Output
+
+```text
+$ npm start 192.168.1.135
+
+> smartbulb@1.0.0 start
+> node src/index.js 192.168.1.135
+
+Send: {"system":{"get_sysinfo":{}}} to 192.168.1.135:9999
+  Connected to device!
+    Connection closed.
+Recv: {"system":{"get_sysinfo":{"sw_ver":"1.0.11 Build 21091...
+
+Send: {"smartlife.iot.smartbulb.lightingservice":{"transitio...
+  Connected to device!
+    Connection closed.
+Recv: {"smartlife.iot.smartbulb.lightingservice":{"transitio...
+
+...
+
+Send: {"system":{"reboot":{"delay":1}}} to 192.168.1.135:9999
+  Connected to device!
+    Connection closed.
+Recv: {"system":{"reboot":{"err_code":0}}}
+
+Done
+```
