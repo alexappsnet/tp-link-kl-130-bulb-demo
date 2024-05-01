@@ -54,7 +54,7 @@ export function createSetRgbCommand(red /*0-255*/, green /*0-255*/, blue /*0-255
         on_off: 1,
         brightness: Math.round(100 * level),
         color_temp: 0,
-        hue,
+        hue: Math.round(hue),
         saturation: Math.round(100 * saturation),
         transition_period: 0
       }
